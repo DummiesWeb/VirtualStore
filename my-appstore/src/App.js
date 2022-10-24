@@ -1,13 +1,20 @@
 import './App.css';
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css'
+import Header from './components/Header/Header';
+import ListaProductos from './components/ListaProductos/ListaProductos';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Hola mundo desde React!!!.</h1>
-        <h3>Dummies web. misión tic 2022.</h3>
-      </header>
-    </div>
+   <>
+   <BrowserRouter>
+   <Header/>
+   <Routes>
+   <Route path='/ListaProductos' element={<ListaProductos/>}/>
+   </Routes>
+   </BrowserRouter>
+
+   </>
   );
 }
 

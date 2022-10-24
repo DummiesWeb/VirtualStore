@@ -1,1 +1,10 @@
-.ListaProductos {}
+.ListaProductos {
+    margin: 10px;
+    margin-bottom: 2em;
+}
+.wrapper {
+    display: grid;
+    margin-left: 35px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
