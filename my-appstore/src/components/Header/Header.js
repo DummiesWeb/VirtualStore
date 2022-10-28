@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import styles from './Header.module.css';
+import Button from 'react-bootstrap/Button';
 
 const Header = () => (
   <div>
@@ -12,9 +13,12 @@ const Header = () => (
           <Navbar.Brand href="/Home">Kwik-E-Mart</Navbar.Brand>
           <Nav className="me-auto">
                 <Nav.Link href="/Home">Inicio🏠</Nav.Link>
-                <Nav.Link href="/ListaProductos">Lista Productos</Nav.Link>
+                <Nav.Link href="/ListaProductos">Lista Productos📒</Nav.Link>
                 <Nav.Link href="/ListaVentas"> Lista Ventas</Nav.Link>
                 <Nav.Link href="/CarCompras"> Carrito🛒</Nav.Link>
+                <div className={styles.botoncontainer}> <h3>👉</h3>
+                <Button variant="outline-secondary ms-auto" >Regitrarse</Button>
+                </div >
               </Nav>
             </Container>
           </Navbar>

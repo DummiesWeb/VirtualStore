@@ -27,12 +27,12 @@ const Footer = () => (
 <ul class="list-unstyled">
   <li>
     <p>
-      <a href="https://github.com/DummiesWeb">PROJECTS</a>
+      <a href="#!">PROJECTS</a>
     </p>
   </li>
   <li>
     <p>
-      <a href="#!">ABOUT US</a>
+      <a href="https://github.com/DummiesWeb">ABOUT US</a>
     </p>
   </li>
   <li>
@@ -55,19 +55,19 @@ const Footer = () => (
         <ul class="list-unstyled">
           <li>
             <p>
-              <i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+              <i class="fas fa-home mr-3"></i>📬 New York, NY 10012, US</p>
           </li>
           <li>
             <p>
-              <i class="fas fa-envelope mr-3"></i> info@DummiesWeb.com</p>
+              <i class="fas fa-envelope mr-3"></i>📧 info@DummiesWeb.com </p>
           </li>
           <li>
             <p>
-              <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+              <i class="fas fa-phone mr-3"></i>☎️ + 01 234 567 88</p>
           </li>
           <li>
             <p>
-              <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+              <i class="fas fa-print mr-3"></i>☎️ + 01 234 567 89</p>
           </li>
         </ul>
       </div>

@@ -9,7 +9,7 @@ return(
   <div className={styles.ListaVentas}>
     
     <div>
-           <h3>Lista de ventas</h3>   
+           <h3>🤑Lista de ventas🤑</h3>   
               <Table striped bordered hover>
                 <thead>
                   <tr>

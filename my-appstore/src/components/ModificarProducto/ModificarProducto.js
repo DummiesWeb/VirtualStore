@@ -42,7 +42,7 @@ const ModificarProducto = () => {
     localStorage.setItem("productoModificar",JSON.stringify(newProducto))
     productoModificado=true
 
-    alert("Producto Modificado")
+    alert("Producto Modificado 👌")
     e.target.form.elements.idnewinput.value=""
     e.target.form.elements.nombrenewinput.value=""
     e.target.form.elements.descripcionnewinput.value=""
