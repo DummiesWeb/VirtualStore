@@ -115,7 +115,7 @@ const AddProducto = () => {
                           }
                             />
                         </InputGroup>
-                        <Button variant="primary" 
+                        <Button variant="primary mb-3  " size="lg"
                         type="submit"
                         
                         >Agregar</Button>

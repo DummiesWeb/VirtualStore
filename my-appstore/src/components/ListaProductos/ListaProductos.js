@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from './ListaProductos.module.css';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import 'bootstrap/dist/css/bootstrap.min.css'
 import AddProducto from '../AddProducto/AddProducto';
 //import Datosproductos from './Datosproductos.js';
   const ListaProductos = () => {
@@ -57,6 +58,13 @@ import AddProducto from '../AddProducto/AddProducto';
                       ()=>{
                          eliminarProducto(producto.nombre)
                          }}>Eliminar</Button>
+
+                         <div className={styles.botonmargin}>
+                         <Button variant="success" onClick={
+                      ()=>{
+                        alert("Producto añadido")
+                         }}>Agregar al Carrito</Button>
+                         </div>
       </Card.Body>
     </Card>
       );  
