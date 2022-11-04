@@ -1,0 +1,20 @@
+.ListaProductos {
+    margin: 10px;
+    margin-bottom: 2em;
+}
+.wrapper {
+    display: grid;
+    margin-left: 35px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+
+  .formulario{
+    text-align: center;
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+
+  .botonmargin{
+    padding-top: 3px;
+  }

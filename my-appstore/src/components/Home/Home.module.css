@@ -1,0 +1,31 @@
+.Home {
+    
+    background-image: url(../../img/minisup.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+.formulario{
+    background: rgba(0, 0, 0, .2);
+    padding: 25px;
+    gap: 4;
+   
+    border-radius: 10px;
+   
+    color: white;
+
+}
+.formcontrol{
+    background: rgba(0, 0, 0, .4);
+    text-align: center;
+    
+}
+
+.ingresar{
+    background: #222a3f;
+    font-size: 20px;
+    font-weight: 700!important;
+   
+}
