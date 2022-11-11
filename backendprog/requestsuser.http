@@ -1,0 +1,28 @@
+###
+POST http://localhost:8081/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Gono Chanda",
+    "email": "chandagonno@email.com",
+    "password": "rechanda"
+}
+
+###
+GET http://localhost:8081/api/users HTTP/1.1
+
+###
+GET http://localhost:8081/api/users/636ec5a16c8f0de760a3c0b1 HTTP/1.1
+
+###
+PUT  http://localhost:8081/api/users/636ec7c924da51776ae310ec HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Maria Gabriela Marin",
+    "email": "MariaGMarin@email.com",
+    "password": "MGM123"
+}
+
+###
+DELETE   http://localhost:8081/api/users/636ed5121c6dff357ec7b8bd HTTP/1.1
