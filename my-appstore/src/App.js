@@ -1,34 +1,34 @@
 import './App.css';
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Header from './components/Header/Header';
 import ListaProductos from './components/ListaProductos/ListaProductos';
-import datosProductosJson from './components/ListaProductos/Datosproductos';
-import ModificarProducto from './components/ModificarProducto/ModificarProducto';
 import ListaVentas from './components/ListaVentas/ListaVentas';
 import CarCompras from './components/CarCompras/CarCompras';
 import Home from './components/Home/Home';
 import Footer from './components/Footer/Footer';
-
+import { ProductoProvider } from './context/productoContext';
+import AddProducto from './components/AddProducto/AddProducto';
+import { Toaster } from "react-hot-toast";
 function App() {
 
-  if(localStorage.getItem("productos")==null){
-    localStorage.setItem("productos",JSON.stringify(datosProductosJson))
- }
+ 
   return (
-   <>
-   <BrowserRouter>
+   <> 
    <Header/>
+   
+   <ProductoProvider>
    <Routes>
    <Route path='/' element={<Home/>}/>
-   <Route path='/ListaProductos' element={<ListaProductos />}/>
-   <Route path='/Modificar'  element={<ModificarProducto/>}/>
    <Route path='/ListaVentas'  element={<ListaVentas/>}/>
    <Route path='/CarCompras'  element={<CarCompras/>}/>
-   </Routes>
+  <Route path='/productos' element={<ListaProductos />}/>
+  <Route path='/addProducto'  element={<AddProducto/>}/>
+  <Route path='/productos/:id'  element={<AddProducto/>}/>
+  </Routes>
+   </ProductoProvider>
+   <Toaster/>
    <Footer/>
-   </BrowserRouter>
-
    </>
   );
 }

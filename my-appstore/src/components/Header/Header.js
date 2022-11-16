@@ -13,7 +13,7 @@ const Header = () => (
           <Navbar.Brand href="/">Kwik-E-Mart</Navbar.Brand>
           <Nav className="me-auto">
                 <Nav.Link href="/">Inicio🏠</Nav.Link>
-                <Nav.Link href="/ListaProductos">Lista Productos📒</Nav.Link>
+                <Nav.Link href="/productos">Lista Productos📒</Nav.Link>
                 <Nav.Link href="/ListaVentas"> Lista Ventas</Nav.Link>
                 <Nav.Link href="/CarCompras"> Carrito🛒</Nav.Link>
                 <div className={styles.botoncontainer}> <h3>👉</h3>

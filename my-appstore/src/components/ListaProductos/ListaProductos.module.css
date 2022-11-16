@@ -18,3 +18,18 @@
   .botonmargin{
     padding-top: 3px;
   }
+
+  .link{
+   
+   
+    margin-left: 40%;
+    font-size: 20px;
+    text-decoration-line: none;
+    margin-top: 4px;
+    padding-bottom: 3px;
+    
+  }
+  .ListaProductos {
+    text-align: center;
+       
+    }

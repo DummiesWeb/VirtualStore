@@ -1,79 +1,48 @@
-import React, { useState } from 'react';
 import styles from './ListaProductos.module.css';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import AddProducto from '../AddProducto/AddProducto';
-//import Datosproductos from './Datosproductos.js';
+import { useProductos } from '../../context/productoContext';
+import { ProductoCard } from '../ProductoCard/ProductoCard';
+import { Link} from "react-router-dom";
+
   const ListaProductos = () => {
+   
   //state
-  const datosProductosJson= JSON.parse(localStorage.getItem("productos"))
-  const [datosProductos, setDatosProductos]=useState(datosProductosJson)
+  const { productos } = useProductos();
 
-
-  //eliminar producto
-  const eliminarProducto= (id)=>{
-   const listaProductosNew = datosProductos.filter(
-      (producto)=>(producto.nombre !== id)
-    )
-    localStorage.clear();
-  setDatosProductos(listaProductosNew)
-
-  }
-
-  const modificarProducto=(ModificarProducto)=>{
-    localStorage.setItem("productoModificar",JSON.stringify(ModificarProducto))
-  }
-
- 
-
- 
+ const renderProducto = () =>{
+  
+  if (productos.length===0)
+ return (
+  <div className="flex flex-col justify-center items-center">
+    <h1 className="text-white text-2xl">No hay productos agregados</h1>
+  </div>
+);
 
  return(
-  <>
-  <div className={styles.wrapper}>
-  {
-   datosProductos.map(
-    (producto)=>{
-      return(
-        
-       <Card className={styles.ListaProductos} style={{ width: '18rem'}}>
-      <Card.Img style={{ height:'10rem', width:'14rem' }} variant="top" src={producto.img} />
-      <Card.Body>
-        <Card.Title>{producto.nombre}</Card.Title>
-        <Card.Text>
-          <p>id:{producto.id}</p>
-        <p>{producto.descripcion}</p>
-        <h5>Precio: {producto.precio} us$</h5>
-        <h5>Stock: {producto.stock}</h5>
-        </Card.Text>
-        <Button variant="primary" onClick={
-                      ()=>{
-                        modificarProducto(producto)
-                        window.location.href="/Modificar"
-                      }
-                      }
-        >Editar</Button>{"  "}
-        <Button variant="danger " onClick={
-                      ()=>{
-                         eliminarProducto(producto.nombre)
-                         }}>Eliminar</Button>
-
-                         <div className={styles.botonmargin}>
-                         <Button variant="success" onClick={
-                      ()=>{
-                        alert("Producto añadido")
-                         }}>Agregar al Carrito</Button>
-                         </div>
-      </Card.Body>
-    </Card>
-      );  
-  })}
-  </div>
-  <AddProducto />
-   
-  </>  
- )
   
+  <div className={styles.wrapper}>
+  { productos.map((producto)=>(
+      <ProductoCard key={producto._id} producto={producto}/>))}
+  </div>
+  
+  
+ );
+ };
+ return (
+  <main>
+   <h1 className={styles.ListaProductos}>Lista de productos</h1>
+   <h1 className="text-2xl text-gray-300 font-bold">
+          Productos({productos.length})
+        </h1>
+    {renderProducto()}
+
+    <div className={styles.link} >
+  <Link to="/addProducto"   className=" btn btn-primary" >
+    Agregar nuevo producto
+  </Link>
+  </div>
+  </main>
+ )
+ 
 };
 export default ListaProductos;

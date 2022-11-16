@@ -9,8 +9,8 @@ import github from '../../img/github.png'
 
 
 const Footer = () => (
-  <div className={styles.Footer}>
-    <footer  className={styles.footer}>
+  <div class={styles.Footer}>
+    <footer  class={styles.footer}>
     <div class="text-center text-md-left">
     <div class="row">
       <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
