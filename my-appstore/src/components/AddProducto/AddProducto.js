@@ -55,10 +55,8 @@ const AddProducto = () => {
           await updateProducto(params.id, values);
         }else{
           await createProducto(values);
-        
         }
-        navegate('/productos/');
-        
+        navegate('/productos/'); 
      }}
       >
         {({handleSubmit})=>(

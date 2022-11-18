@@ -1,0 +1,43 @@
+.Register {
+    column-gap: normal;
+}
+.card{
+    background: rgba(0, 0, 0, .2);
+   
+   margin-top: 5%;
+   margin-block-end: 5%;
+    gap: 4;
+   
+    border-radius: 10px;
+}
+.boton{
+    display: flex;
+    width: 40vh;
+    
+  /* Cambia los valores  👇 para experimentar*/
+  align-items: center;
+  justify-content: center;
+}
+.container{
+    background-image: linear-gradient(
+  55deg,
+  hsl(165deg 38% 48%) 0%,
+  hsl(184deg 100% 33%) 2%,
+  hsl(199deg 100% 41%) 3%,
+  hsl(210deg 100% 47%) 6%,
+  hsl(219deg 100% 47%) 9%,
+  hsl(216deg 100% 50%) 14%,
+  hsl(207deg 100% 48%) 22%,
+  hsl(194deg 100% 41%) 49%,
+  hsl(177deg 100% 35%) 72%,
+  hsl(164deg 62% 45%) 82%,
+  hsl(162deg 50% 47%) 88%,
+  hsl(160deg 42% 49%) 93%,
+  hsl(158deg 35% 50%) 97%,
+  hsl(157deg 30% 50%) 100%
+);
+margin-left: 1%;
+
+max-width: 98%;
+}
+

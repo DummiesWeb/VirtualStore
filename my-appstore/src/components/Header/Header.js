@@ -17,7 +17,7 @@ const Header = () => (
                 <Nav.Link href="/ListaVentas"> Lista Ventas</Nav.Link>
                 <Nav.Link href="/CarCompras"> Carrito🛒</Nav.Link>
                 <div className={styles.botoncontainer}> <h3>👉</h3>
-                <Button variant="outline-secondary ms-auto" >Regitrarse</Button>
+                <Button variant="outline-secondary ms-auto"  href='/registro'>Regitrarse</Button>
                 </div >
               </Nav>
             </Container>

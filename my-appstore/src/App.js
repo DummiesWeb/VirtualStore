@@ -8,8 +8,10 @@ import CarCompras from './components/CarCompras/CarCompras';
 import Home from './components/Home/Home';
 import Footer from './components/Footer/Footer';
 import { ProductoProvider } from './context/productoContext';
+import { UserProvider } from "./context/userContext";
 import AddProducto from './components/AddProducto/AddProducto';
 import { Toaster } from "react-hot-toast";
+import Register from './components/register/register';
 function App() {
 
  
@@ -19,7 +21,6 @@ function App() {
    
    <ProductoProvider>
    <Routes>
-   <Route path='/' element={<Home/>}/>
    <Route path='/ListaVentas'  element={<ListaVentas/>}/>
    <Route path='/CarCompras'  element={<CarCompras/>}/>
   <Route path='/productos' element={<ListaProductos />}/>
@@ -27,6 +28,13 @@ function App() {
   <Route path='/productos/:id'  element={<AddProducto/>}/>
   </Routes>
    </ProductoProvider>
+   
+   <UserProvider>
+    <Routes>
+    <Route path='/' element={<Home/>}/>
+    <Route path='/registro' element={<Register/>}/>
+    </Routes>
+   </UserProvider>
    <Toaster/>
    <Footer/>
    </>

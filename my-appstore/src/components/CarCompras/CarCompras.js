@@ -59,13 +59,13 @@ return (
       ()=>{
       alert("Compra realizada exitosamente")
 
-      window.location.href="/ListaProductos"
+      window.location.href="/productos"
     }}
         >Finalizar compra</Button>{"  "}
         <Button variant="outline-danger mb-3 " onClick={
          ()=>{
           alert("su compra ha sido cancelada")
-          window.location.href="/ListaProductos"
+          window.location.href="/productos"
          }
         }
          >Cancelar</Button>
