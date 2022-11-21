@@ -21,7 +21,7 @@ const productoSchema =new mongoose.Schema({
         required: true,
       
     },
-    img:{
+    image:{
         public_id: String,
         url: String,
     }

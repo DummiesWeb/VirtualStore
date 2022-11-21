@@ -42,7 +42,7 @@ const Home = () =>{
             setMensaje("");
            localStorage.setItem("token", data?.usuario.token);
             navigate(`/Productos`);
-          }, 1500);
+          }, 2500);
         })
         .catch((error) => {
           console.error(error);
@@ -99,12 +99,12 @@ const Home = () =>{
               />
             </div>
           </div>
-          <div className='d-flex justify-content-center'>
+          <div className='d-flex justify-content-center my-3'>
           <Button type="submit" className='btn btn-primary' >
             {loading ? "Cargando..." : "Iniciar Sesión"}
           </Button>
           </div>
-          <p className='d-flex justify-content-center'>
+          <p className='d-flex justify-content-center my-2'>
             Aun no tienes cuenta?{" "}
             <b onClick={() => navigate("/productos")}>Registrate!</b>
           </p>

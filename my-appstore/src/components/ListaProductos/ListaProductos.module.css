@@ -1,6 +1,7 @@
 .ListaProductos {
     margin: 10px;
     margin-bottom: 2em;
+    height: 30px;
 }
 .wrapper {
     display: grid;

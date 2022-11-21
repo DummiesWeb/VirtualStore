@@ -8,6 +8,7 @@ import { useProductos } from '../../context/productoContext';
 import { useNavigate} from "react-router-dom";
 
 
+
 export function ProductoCard  ({producto}){
 
 
@@ -38,9 +39,10 @@ const navigate = useNavigate();
 
   return (
     <div className={styles.ProductoCard}>
-     <Card className={styles.ListaProductos} style={{ width: '18rem'}}>
-      <Card.Img style={{ height:'10rem', width:'14rem' }} variant="top" src={producto.img} />
-      <Card.Body>
+     <Card className={styles.ListaProductos} style={{ width: '19rem'} }>
+       <div className={styles.img} style={{height:'13em'}}>{producto.image && <img src={producto.image.url} alt={producto.title}/>}
+       </div>
+      <Card.Body> 
         <Card.Title>{producto.nombre}</Card.Title>
         <Card.Text>
           <p>{producto._id}</p>

@@ -59,7 +59,7 @@ const AddProducto = () => {
         navegate('/productos/'); 
      }}
       >
-        {({handleSubmit})=>(
+        {({handleSubmit, setFieldValue})=>(
          <Form onSubmit={handleSubmit}>
          <div>
          <Field name='nombre' placeholder="Nombre" className={styles.field}/>
@@ -77,7 +77,16 @@ const AddProducto = () => {
         <Field name='stock' placeholder="cantidad" className={styles.field}/>
         <ErrorMessage name='stock'/>
         </div>
-       <div>
+        <div>
+          <label> Subir Imagen:</label>
+        <input
+                type="file"
+                name="image"
+                onChange={(e) => setFieldValue("image", e.target.files[0])}
+              
+              />
+        </div>
+       <div className='my-2'>
        <Button className={styles.boton} variant="primary large" 
                    type="submit" 
                    >Save</Button>
